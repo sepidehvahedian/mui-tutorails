@@ -1,7 +1,16 @@
+import * as React from "react";
+import { Typography as Type } from "@mui/material";
+
 function App() {
   return (
     <div>
+      <Type variant="h2" component={"h1"} sx={{color:'red'}}> Typography</Type>
       <h1>MUI TUTORAILS</h1>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium
+        voluptates beatae inventore a dolorem officiis facilis pariatur velit
+        totam? Provident.
+      </p>
     </div>
   );
 }
