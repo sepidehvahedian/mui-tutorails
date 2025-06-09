@@ -1,17 +1,28 @@
 import * as React from "react";
-import { Button, TextField } from "@mui/material";
+import {
+  Button,
+  TextField,
+  FormGroup,
+  FormControlLabel,
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
+} from "@mui/material";
 
 function Form() {
   const [inputs, setInputs] = React.useState({
     name: "",
     email: "",
     password: "",
+    terms: false,
+    courses: "",
   });
 
   const handleChange = (e) => {
     setInputs((prevState) => ({
       ...prevState,
-      [e.target.name]: [e.target.value],
+      [e.target.name]: e.target.value,
     }));
   };
   // form handling
@@ -52,6 +63,20 @@ function Form() {
           sx={{ margin: "30px" }}
         />
         <br />
+        <FormControl fullWidth>
+          <InputLabel id="menu">Courses</InputLabel>
+          <Select
+            label="courses"
+            name="courses"
+            value={inputs.courses}
+            onChange={(e) => handleChange(e)}
+          >
+            <MenuItem value={"mongodb"}>Mongodb</MenuItem>
+            <MenuItem value={"express"}>express</MenuItem>
+            <MenuItem value={"Node"}>Node</MenuItem>
+            <MenuItem value={"react"}>react</MenuItem>
+          </Select>
+        </FormControl>
         <Button
           variant="contained"
           color="primary"
