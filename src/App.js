@@ -5,22 +5,29 @@ import {
   TextField,
   AppBar,
   Toolbar,
+  Tabs,
+  Tab,
 } from "@mui/material";
 import Form from "./Form";
 
 function App() {
+  const [value,setValue]=React.useState(0)
   return (
     <div>
       <AppBar>
         <Toolbar>
           <Type variant="h4">LOGO</Type>
-          <Button
-            variant="contained"
-            color="success"
+          <Tabs
             sx={{ marginLeft: "auto" }}
+            value={value}
+            onChange={(e,val)=>setValue(val)}
+            textColor="inherit"
+            indicatorColor="secondary"
           >
-            Sungin
-          </Button>
+            <Tab label="Home" />
+            <Tab label="About" />
+            <Tab label="Contact" />
+          </Tabs>
         </Toolbar>
       </AppBar>
       {/* <Form/> */}
