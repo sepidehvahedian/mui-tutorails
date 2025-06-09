@@ -8,6 +8,7 @@ import {
   InputLabel,
   Select,
   MenuItem,
+  Checkbox,
 } from "@mui/material";
 
 function Form() {
@@ -77,6 +78,23 @@ function Form() {
             <MenuItem value={"react"}>react</MenuItem>
           </Select>
         </FormControl>
+        <br />
+        <FormGroup sx={{ margin: "20px" }}>
+          <FormControlLabel
+            label="I Agree T&C"
+            control={
+              <Checkbox
+                name="terms"
+                onChange={(e) => {
+                  setInputs((prevState) => ({
+                    ...prevState,
+                    [e.target.name]: e.target.checked,
+                  }));
+                }}
+              />
+            }
+          />
+        </FormGroup>
         <Button
           variant="contained"
           color="primary"
