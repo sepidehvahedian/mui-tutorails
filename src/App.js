@@ -9,9 +9,10 @@ import {
   Tab,
 } from "@mui/material";
 import Form from "./Form";
+import Cards from "./Cards";
 
 function App() {
-  const [value,setValue]=React.useState(0)
+  const [value, setValue] = React.useState(0);
   return (
     <div>
       <AppBar>
@@ -20,7 +21,7 @@ function App() {
           <Tabs
             sx={{ marginLeft: "auto" }}
             value={value}
-            onChange={(e,val)=>setValue(val)}
+            onChange={(e, val) => setValue(val)}
             textColor="inherit"
             indicatorColor="secondary"
           >
@@ -31,6 +32,9 @@ function App() {
         </Toolbar>
       </AppBar>
       {/* <Form/> */}
+      <div styles={{ margintop: 100 }}>
+        <Cards />
+      </div>
     </div>
   );
 }
