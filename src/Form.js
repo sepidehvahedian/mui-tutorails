@@ -99,32 +99,27 @@ function Form() {
             }
           />
         </FormGroup>
-        <br/>
-          <FormControl>
-            <FormLabel>Gender</FormLabel>
-            <RadioGroup
-              name="gender"
-              defaultValue={"male"}
-              onChange={handleChange}
-            >
-              <FormControlLabel
-                value={"male"}
-                label="Male"
-                control={<Radio />}
-              />
-              <FormControlLabel
-                value={"female"}
-                label="Female"
-                control={<Radio />}
-              />
-              <FormControlLabel
-                value={"other"}
-                label="Other"
-                control={<Radio />}
-              />
-            </RadioGroup>
-          </FormControl>
-          <br/>
+        <br />
+        <FormControl>
+          <FormLabel>Gender</FormLabel>
+          <RadioGroup
+            name="gender"
+            defaultValue={"male"}
+            onChange={handleChange}
+          >
+            <FormControlLabel value={"male"} label="Male" control={<Radio />} />
+            <FormControlLabel
+              value={"female"}
+              label="Female"
+              control={<Radio />}
+            />
+            <FormControlLabel
+              value={"other"}
+              label="Other"
+              control={<Radio />}
+            />
+          </RadioGroup>
+        </FormControl>
         <Button
           variant="contained"
           color="primary"
