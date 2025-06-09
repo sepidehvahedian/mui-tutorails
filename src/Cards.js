@@ -1,17 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Button,
   Card,
   CardActions,
   CardContent,
   CardMedia,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
   Typography,
 } from "@mui/material";
 
 function Cards() {
+  const [open, setOpen] = useState();
+
   return (
     <div>
-      <Card sx={{ maxWidth: 300,marginTop:'70px' }}>
+      <Card sx={{ maxWidth: 300, marginTop: "70px" }}>
         <CardMedia
           component={"img"}
           height={"140"}
@@ -29,9 +35,22 @@ function Cards() {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small">Share</Button>
+          <Button size="small" color="primary">
+            Share
+          </Button>
+          <Button size="small" color="primary" onClick={() => setOpen(true)}>
+            Delete
+          </Button>
         </CardActions>
       </Card>
+      <Dialog open={open} onClose={() => setOpen(false)}>
+        <DialogTitle>Are You Sure</DialogTitle>
+        <DialogContent>are you sure to delete this products ?</DialogContent>
+        <DialogActions>
+          <Button onClick={()=>setOpen(false)}>Cancel</Button>
+          <Button>Delete</Button>
+        </DialogActions>
+      </Dialog>
     </div>
   );
 }
