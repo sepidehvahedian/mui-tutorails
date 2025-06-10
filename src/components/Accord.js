@@ -3,10 +3,13 @@ import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
+  Autocomplete,
+  TextField,
   Typography,
 } from "@mui/material";
 
 function Accord() {
+  const courses = ["react", "nodejs", "mern", "nextjs", "UI"];
   return (
     <div style={{ marginTop: "100px" }}>
       <Accordion>
@@ -19,6 +22,11 @@ function Accord() {
           molestias!
         </AccordionDetails>
       </Accordion>
+      <Autocomplete
+        sx={{ width: 200,marginTop:5 }}
+        options={courses}
+        renderInput={(params) => (<TextField {...params} label="Selct a course" />)}
+      />
     </div>
   );
 }
