@@ -12,6 +12,7 @@ import Form from "./components/Form";
 import Cards from "./components/Cards";
 import Modals from "./components/Modals";
 import Containers from "./components/Containers";
+import ListComponents from "./components/ListComponents";
 
 function App() {
   const [value, setValue] = React.useState(0);
@@ -37,7 +38,8 @@ function App() {
       <div styles={{ margintop: 300 }}>
         {/* <Cards /> */}
         {/* <Modals /> */}
-        <Containers/>
+        {/* <Containers/> */}
+        <ListComponents/>
       </div>
     </div>
   );
