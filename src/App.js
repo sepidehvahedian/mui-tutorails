@@ -13,6 +13,7 @@ import Cards from "./components/Cards";
 import Modals from "./components/Modals";
 import Containers from "./components/Containers";
 import ListComponents from "./components/ListComponents";
+import Accord from "./components/Accord";
 
 function App() {
   const [value, setValue] = React.useState(0);
@@ -39,7 +40,8 @@ function App() {
         {/* <Cards /> */}
         {/* <Modals /> */}
         {/* <Containers/> */}
-        <ListComponents/>
+        {/* <ListComponents/> */}
+        <Accord/>
       </div>
     </div>
   );
