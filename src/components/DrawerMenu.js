@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import {
     Alert,
   Button,
+  CircularProgress,
   Drawer,
+  LinearProgress,
   List,
   ListItemButton,
   ListItemText,
@@ -31,6 +33,9 @@ function DrawerMenu() {
       <Snackbar open={true} autoHideDuration={2000}>
         <Alert security="success">This Alert Snackbar</Alert>
       </Snackbar>
+      <br/>
+      <CircularProgress color="secondary"  value={75}/>
+      <LinearProgress/>
     </div>
   );
 }
