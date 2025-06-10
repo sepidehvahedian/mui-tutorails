@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import AddReactionIcon from "@mui/icons-material/AddReaction";
 import {
   Alert,
   Button,
   CircularProgress,
   Drawer,
+  IconButton,
   LinearProgress,
   List,
   ListItemButton,
@@ -47,6 +49,11 @@ function DrawerMenu() {
         precision={0.5}
       />
       <Typography>Rated{value !== undefined ? value : 0}stars</Typography>
+      <br />
+      <br />
+      <IconButton onClick={() => alert("Icon BTN")}>
+        <AddReactionIcon color="secondary" />
+      </IconButton>
     </div>
   );
 }
