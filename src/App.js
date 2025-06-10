@@ -11,6 +11,7 @@ import {
 import Form from "./components/Form";
 import Cards from "./components/Cards";
 import Modals from "./components/Modals";
+import Containers from "./components/Containers";
 
 function App() {
   const [value, setValue] = React.useState(0);
@@ -33,9 +34,10 @@ function App() {
         </Toolbar>
       </AppBar>
       {/* <Form/> */}
-      <div styles={{ margintop: 100 }}>
+      <div styles={{ margintop: 300 }}>
         {/* <Cards /> */}
-        <Modals />
+        {/* <Modals /> */}
+        <Containers/>
       </div>
     </div>
   );
