@@ -8,8 +8,9 @@ import {
   Tabs,
   Tab,
 } from "@mui/material";
-import Form from "./Form";
-import Cards from "./Cards";
+import Form from "./components/Form";
+import Cards from "./components/Cards";
+import Modals from "./components/Modals";
 
 function App() {
   const [value, setValue] = React.useState(0);
@@ -33,7 +34,8 @@ function App() {
       </AppBar>
       {/* <Form/> */}
       <div styles={{ margintop: 100 }}>
-        <Cards />
+        {/* <Cards /> */}
+        <Modals />
       </div>
     </div>
   );
