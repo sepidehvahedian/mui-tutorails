@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {
-    Alert,
+  Alert,
   Button,
   CircularProgress,
   Drawer,
@@ -8,15 +8,18 @@ import {
   List,
   ListItemButton,
   ListItemText,
+  Rating,
   Snackbar,
+  Typography,
 } from "@mui/material";
 
 function DrawerMenu() {
   const [open, setOpen] = useState(false);
+  const [value, setValue] = useState();
   const courses = ["Reactjs", "Nodejs", "Mongodb", "Mern"];
 
   return (
-    <div  style={{ marginTop: "100px" }}>
+    <div style={{ marginTop: "100px" }}>
       <Button onClick={() => setOpen(true)}>Open</Button>
       <Drawer open={open} onClose={() => setOpen(false)}>
         <List>
@@ -29,13 +32,21 @@ function DrawerMenu() {
           </List>
         </List>
       </Drawer>
-      <br/>
+      <br />
       <Snackbar open={true} autoHideDuration={2000}>
         <Alert security="success">This Alert Snackbar</Alert>
       </Snackbar>
-      <br/>
-      <CircularProgress color="secondary"  value={75}/>
-      <LinearProgress/>
+      <br />
+      <CircularProgress color="secondary" value={75} />
+      <LinearProgress />
+      <br />
+      <Rating
+        value={value}
+        onChange={(e, val) => setValue(val)}
+        size="large"
+        precision={0.5}
+      />
+      <Typography>Rated{value !== undefined ? value : 0}stars</Typography>
     </div>
   );
 }
