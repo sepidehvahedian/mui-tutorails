@@ -14,6 +14,7 @@ import Modals from "./components/Modals";
 import Containers from "./components/Containers";
 import ListComponents from "./components/ListComponents";
 import Accord from "./components/Accord";
+import DrawerMenu from "./components/DrawerMenu";
 
 function App() {
   const [value, setValue] = React.useState(0);
@@ -41,7 +42,8 @@ function App() {
         {/* <Modals /> */}
         {/* <Containers/> */}
         {/* <ListComponents/> */}
-        <Accord/>
+        {/* <Accord/> */}
+        <DrawerMenu/>
       </div>
     </div>
   );
