@@ -15,9 +15,11 @@ import Containers from "./components/Containers";
 import ListComponents from "./components/ListComponents";
 import Accord from "./components/Accord";
 import DrawerMenu from "./components/DrawerMenu";
+import Buttons from "./components/Buttons";
 
 function App() {
   const [value, setValue] = React.useState(0);
+
   return (
     <div>
       <AppBar>
@@ -38,12 +40,14 @@ function App() {
       </AppBar>
       {/* <Form/> */}
       <div styles={{ margintop: 300 }}>
+       
         {/* <Cards /> */}
         {/* <Modals /> */}
         {/* <Containers/> */}
         {/* <ListComponents/> */}
         {/* <Accord/> */}
         <DrawerMenu/>
+         <Buttons>Click Here</Buttons>
       </div>
     </div>
   );
