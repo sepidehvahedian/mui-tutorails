@@ -7,6 +7,7 @@ import {
   Toolbar,
   Tabs,
   Tab,
+  ThemeProvider,
 } from "@mui/material";
 import Form from "./components/Form";
 import Cards from "./components/Cards";
@@ -16,12 +17,14 @@ import ListComponents from "./components/ListComponents";
 import Accord from "./components/Accord";
 import DrawerMenu from "./components/DrawerMenu";
 import Buttons from "./components/Buttons";
+import theme from "./components/theme";
 
 function App() {
   const [value, setValue] = React.useState(0);
 
   return (
-    <div>
+  <ThemeProvider theme={theme}>
+      <div>
       <AppBar>
         <Toolbar>
           <Type variant="h4">LOGO</Type>
@@ -50,6 +53,7 @@ function App() {
          <Buttons>Click Here</Buttons>
       </div>
     </div>
+  </ThemeProvider>
   );
 }
 
