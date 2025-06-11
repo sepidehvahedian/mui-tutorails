@@ -18,6 +18,7 @@ import Accord from "./components/Accord";
 import DrawerMenu from "./components/DrawerMenu";
 import Buttons from "./components/Buttons";
 import theme from "./components/theme";
+import Grids from "./components/Grids";
 
 function App() {
   const [value, setValue] = React.useState(0);
@@ -51,6 +52,7 @@ function App() {
         {/* <Accord/> */}
         <DrawerMenu/>
          <Buttons>Click Here</Buttons>
+         <Grids/>
       </div>
     </div>
   </ThemeProvider>
